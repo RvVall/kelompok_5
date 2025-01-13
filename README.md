@@ -133,10 +133,12 @@ class ObatSeeder extends Seeder
         ]);
     }
 }
-
 12. kemudian push db seed nya dengan mengetik "php artisan db:seed --class=ObatSeeder"
+
 13.Install di terminal vscode "composer require barryvdh/laravel-dompdf"// untuk pdf
+
 14. Buka file config/app.php.
+
 Di dalam array providers, tambahkan:
 
 "Barryvdh\DomPDF\ServiceProvider::class,"
