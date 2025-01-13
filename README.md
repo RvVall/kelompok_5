@@ -57,60 +57,92 @@ class ObatSeeder extends Seeder
 {
     public function run()
     {
+        // Sample data for obat (medications) with additional fields like kode_obat, jenis_obat, and stok
         DB::table('obats')->insert([
             [
+                'kode_obat' => 'OBT001',
                 'nama_obat' => 'Paracetamol 500mg',
-                'harga' => 8500,
+                'jenis_obat' => 'Analgesik / Antipiretik',
+                'harga' => 8500, // Example price in IDR
+                'stok' => 100, // Example stock
                 'deskripsi' => 'Obat penurun demam dan pereda nyeri, umum digunakan untuk sakit kepala, flu, dan nyeri otot.',
             ],
             [
+                'kode_obat' => 'OBT002',
                 'nama_obat' => 'Amoxicillin 500mg',
-                'harga' => 25000,
+                'jenis_obat' => 'Antibiotik',
+                'harga' => 25000, // Example price in IDR
+                'stok' => 50, // Example stock
                 'deskripsi' => 'Antibiotik untuk mengatasi infeksi bakteri, termasuk infeksi saluran pernapasan, telinga, dan saluran kemih.',
             ],
             [
+                'kode_obat' => 'OBT003',
                 'nama_obat' => 'Ibuprofen 400mg',
-                'harga' => 15000,
+                'jenis_obat' => 'Anti-inflamasi',
+                'harga' => 15000, // Example price in IDR
+                'stok' => 75, // Example stock
                 'deskripsi' => 'Obat antiinflamasi non-steroid (NSAID) untuk mengurangi nyeri, demam, dan peradangan.',
             ],
             [
+                'kode_obat' => 'OBT004',
                 'nama_obat' => 'Cetirizine 10mg',
-                'harga' => 12000,
+                'jenis_obat' => 'Antihistamin',
+                'harga' => 12000, // Example price in IDR
+                'stok' => 200, // Example stock
                 'deskripsi' => 'Antihistamin untuk mengatasi gejala alergi seperti hidung tersumbat, bersin, dan gatal-gatal pada kulit.',
             ],
             [
+                'kode_obat' => 'OBT005',
                 'nama_obat' => 'Omeprazole 20mg',
-                'harga' => 30000,
+                'jenis_obat' => 'Antasid / Proton Pump Inhibitor',
+                'harga' => 30000, // Example price in IDR
+                'stok' => 60, // Example stock
                 'deskripsi' => 'Obat yang digunakan untuk mengurangi produksi asam lambung, mengobati tukak lambung dan GERD.',
             ],
             [
+                'kode_obat' => 'OBT006',
                 'nama_obat' => 'Loperamide 2mg',
-                'harga' => 8000,
+                'jenis_obat' => 'Antidiarrheal',
+                'harga' => 8000, // Example price in IDR
+                'stok' => 120, // Example stock
                 'deskripsi' => 'Obat untuk mengatasi diare akut dengan cara memperlambat gerakan usus.',
             ],
             [
+                'kode_obat' => 'OBT007',
                 'nama_obat' => 'Amlodipine 5mg',
-                'harga' => 20000,
+                'jenis_obat' => 'Antihipertensi',
+                'harga' => 20000, // Example price in IDR
+                'stok' => 80, // Example stock
                 'deskripsi' => 'Obat untuk mengobati hipertensi (tekanan darah tinggi) dan angina (nyeri dada).',
             ],
             [
+                'kode_obat' => 'OBT008',
                 'nama_obat' => 'Diphenhydramine 25mg',
-                'harga' => 13000,
+                'jenis_obat' => 'Antihistamin',
+                'harga' => 13000, // Example price in IDR
+                'stok' => 150, // Example stock
                 'deskripsi' => 'Antihistamin yang digunakan untuk meredakan alergi, insomnia, dan sebagai obat anti-mabuk perjalanan.',
             ],
             [
+                'kode_obat' => 'OBT009',
                 'nama_obat' => 'Ciprofloxacin 500mg',
-                'harga' => 22000,
+                'jenis_obat' => 'Antibiotik',
+                'harga' => 22000, // Example price in IDR
+                'stok' => 70, // Example stock
                 'deskripsi' => 'Antibiotik yang digunakan untuk mengobati berbagai infeksi bakteri, termasuk infeksi saluran pernapasan dan saluran kemih.',
             ],
             [
+                'kode_obat' => 'OBT010',
                 'nama_obat' => 'Salbutamol 100mcg',
-                'harga' => 18000,
+                'jenis_obat' => 'Bronkodilator',
+                'harga' => 18000, // Example price in IDR
+                'stok' => 90, // Example stock
                 'deskripsi' => 'Obat bronkodilator yang digunakan untuk mengatasi gejala asma dan bronkitis.',
             ]
         ]);
     }
 }
+
 10. Jalankan Seeder untuk Memasukkan Data
 Setelah membuat seeder, jalankan perintah berikut untuk menambahkan data ke dalam database:
 bash
