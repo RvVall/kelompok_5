@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ $title ?? "SIAKAD" }}</title>
+  <title>{{ $title ?? "SISTEK" }}</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -223,10 +223,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul> -->
             </li>
             <li class="nav-item">
-              <a href="{{ route('dosen.index') }}" class="nav-link {{ Route::is('dosen.index') ? 'active' : '' }}">
+              <a href="{{ route('pasien.index') }}" class="nav-link {{ Route::is('pasien.index') ? 'active' : '' }}">
                 <i class="nav-icon far fa-address-card"></i>
                 <p>
-                  Daftar Dosen
+                  Daftar Pasien
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="{{ route('obat.index') }}" class="nav-link {{ Route::is('obat.index') ? 'active' : '' }}">
+                <i class="nav-icon far fa-address-card"></i>
+                <p>
+                  Daftar Obat
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ route('transaksi.index') }}" class="nav-link {{ Route::is('transaksi.index') ? 'active' : '' }}">
+                <i class="nav-icon far fa-address-card"></i>
+                <p>
+                 Transaksi
                 </p>
               </a>
             </li>

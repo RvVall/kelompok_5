@@ -13,8 +13,6 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Starter Page</li> -->
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -38,31 +36,31 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Kode Obat <span style="color: red">*)</span></label>
                                     <div class="col-sm-5">
-                                        <input type="text" class="form-control" placeholder="Kode Obat" name="kode_obat" required>
+                                        <input type="text" class="form-control" placeholder="Kode Obat" name="kode_obat" value="{{ old('kode_obat') }}" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Nama Obat <span style="color: red">*)</span></label>
                                     <div class="col-sm-5">
-                                        <input type="text" class="form-control" placeholder="Nama Obat" name="nama_obat" required>
+                                        <input type="text" class="form-control" placeholder="Nama Obat" name="nama_obat" value="{{ old('nama_obat') }}" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Jenis Obat <span style="color: red">*)</span></label>
                                     <div class="col-sm-5">
-                                        <input type="text" class="form-control" placeholder="Jenis Obat" name="jenis_obat" required>
+                                        <input type="text" class="form-control" placeholder="Jenis Obat" name="jenis_obat" value="{{ old('jenis_obat') }}" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Harga <span style="color: red">*)</span></label>
                                     <div class="col-sm-5">
-                                        <input type="number" class="form-control" placeholder="Harga" name="harga" required>
+                                        <input type="number" class="form-control" placeholder="Harga" name="harga" value="{{ old('harga') }}" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Stok <span style="color: red">*)</span></label>
                                     <div class="col-sm-5">
-                                        <input type="number" class="form-control" placeholder="Stok" name="stok" required>
+                                        <input type="number" class="form-control" placeholder="Stok" name="stok" value="{{ old('stok') }}" required>
                                     </div>
                                 </div>
                             </div>

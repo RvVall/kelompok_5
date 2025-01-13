@@ -5,15 +5,15 @@
 <body class="hold-transition register-page">
     <div class="register-box">
       <!-- <div class="register-logo">
-        <a href="{{ route('home') }}"><b>{{ config('app.name', 'SIAKAD') }}</b> 1.0</a>
+        <a href="{{ route('home') }}"><b>{{ config('app.name', 'SISTEK') }}</b> 1.0</a>
         <h4>Sistem Informasi Akademik</h4>
       </div> -->
 
       <div class="card">
         <div class="card-body register-card-body">
           <div class="register-logo">
-            <a href="{{ route('home') }}"><b style="font-weight: bold;">{{ config('app.name', 'SIAKAD') }}</b> 1.0</a>
-            <h4>Sistem Informasi Akademik</h4>
+            <a href="{{ route('home') }}"><b style="font-weight: bold;">{{ config('app.name', 'SISTEK') }}</b> 1.0</a>
+            <h4>Sistem Apotek</h4>
           </div>
           <!-- <p class="login-box-msg">Register a new membership</p> -->
           <p class="login-box-msg">Registrasi Member Baru</p>

@@ -6,15 +6,15 @@
     <!-- <div class="login-box"> -->
     <div class="login-box">
       <!-- <div class="login-logo">
-        <a href="{{ route('home') }}"><b>{{ config('app.name', 'SIAKAD') }}</b> 1.0</a>
+        <a href="{{ route('home') }}"><b>{{ config('app.name', 'SITEK') }}</b> 1.0</a>
         <h4>Sistem Informasi Akademik</h4>
       </div> -->
       <!-- /.login-logo -->
       <div class="card">
         <div class="card-body login-card-body">
           <div class="login-logo">
-            <a href="{{ route('home') }}"><b style="font-weight: bold;">{{ config('app.name', 'SIAKAD') }}</b> 1.0</a>
-            <h4>Sistem Informasi Akademik</h4>
+            <a href="{{ route('home') }}"><b style="font-weight: bold;">{{ config('app.name', 'SISTEK') }}</b> 1.0</a>
+            <h4>Sistem Apotek</h4>
           </div>
           <!-- <p class="login-box-msg">Sign in to start your session</p> -->
           <p class="login-box-msg">Login</p>
@@ -69,11 +69,11 @@
             <a href="#" class="btn btn-block btn-primary">
               <i class="fab fa-facebook mr-2"></i> Sign in dengan Facebook
             </a>
-            <a href="#" class="btn btn-block btn-danger">
+            /.social-auth-links -->
+            <!-- <a href="#" class="btn btn-block btn-danger">
               <i class="fab fa-google-plus mr-2"></i> Sign in dengan Google+
-            </a>
-          </div> -->
-          <!-- /.social-auth-links -->
+            </a> -->
+          </div> 
           @if (Route::has('password.request'))
           <p class="mb-1">
             <a href="{{ route('password.request') }}">{{ __('Lupa Password?') }}</a>

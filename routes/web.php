@@ -1,30 +1,37 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PasienController;
+use App\Http\Controllers\ObatController;
+use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ExampleController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+// Resource routes for Obat and Transaksi
+Route::resource('obat', ObatController::class);
+Route::resource('transaksi', TransaksiController::class);
+Route::post('/transaksi', [TransaksiController::class, 'store'])->name('transaksi.store');
+Route::get('obat/{obat}/edit', [ObatController::class, 'edit'])->name('obat.edit');
+Route::get('/transaksi/{id}/invoice', [TransaksiController::class, 'generateInvoice'])->name('transaksi.invoice');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+// Route untuk menampilkan form create transaksi
+Route::get('/transaksi/create', [TransaksiController::class, 'create'])->name('transaksi.create');
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/dosen', [App\Http\Controllers\DosenController::class, 'index'])->name('dosen.index');
-Route::get('/dosen/create', [App\Http\Controllers\DosenController::class, 'create'])->name('dosen.create');
-Route::post('/dosen/store', [App\Http\Controllers\DosenController::class, 'store'])->name('dosen.store');
-Route::get('/dosen/{dosen}', [App\Http\Controllers\DosenController::class, 'show'])->name('dosen.show');
-route::get('/dosen/edit/{id}', [App\Http\Controllers\DosenController::class, 'edit'])->name('dosen.edit');
-route::put('/dosen/{id}', [App\Http\Controllers\DosenController::class, 'update'])->name('dosen.update');
-route::delete('/dosen/{id}', [App\Http\Controllers\DosenController::class, 'destroy'])->name('dosen.destroy');
+// Route untuk menyimpan transaksi
+Route::post('/transaksi', [TransaksiController::class, 'store'])->name('transaksi.store');
 
-Route::get('/example', [App\Http\Controllers\ExampleController::class, 'index'])->name('example');
+// Routes for Pasien
+Route::get('/pasien', [PasienController::class, 'index'])->name('pasien.index');
+Route::get('/pasien/create', [PasienController::class, 'create'])->name('pasien.create');
+Route::post('/pasien/store', [PasienController::class, 'store'])->name('pasien.store');
+Route::get('/pasien/{pasien}', [PasienController::class, 'show'])->name('pasien.show');
+Route::get('/pasien/edit/{id}', [PasienController::class, 'edit'])->name('pasien.edit');
+Route::put('/pasien/{id}', [PasienController::class, 'update'])->name('pasien.update');
+Route::delete('/pasien/{id}', [PasienController::class, 'destroy'])->name('pasien.destroy');
+
+// Home Route
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+// Example Route
+Route::get('/example', [ExampleController::class, 'index'])->name('example');
