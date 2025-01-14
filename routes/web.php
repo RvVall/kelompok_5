@@ -6,6 +6,10 @@ use App\Http\Controllers\ObatController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ExampleController;
+use App\Http\Controllers\SupplierController;
+
+Route::resource('suppliers', SupplierController::class);
+
 
 // Resource routes for Obat and Transaksi
 Route::resource('obat', ObatController::class);
@@ -28,6 +32,9 @@ Route::get('/pasien/{pasien}', [PasienController::class, 'show'])->name('pasien.
 Route::get('/pasien/edit/{id}', [PasienController::class, 'edit'])->name('pasien.edit');
 Route::put('/pasien/{id}', [PasienController::class, 'update'])->name('pasien.update');
 Route::delete('/pasien/{id}', [PasienController::class, 'destroy'])->name('pasien.destroy');
+
+
+
 
 // Home Route
 Route::get('/', [HomeController::class, 'index'])->name('home');
